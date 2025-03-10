@@ -23,7 +23,7 @@ def password_strength(password):
     if any(char in "!@#$%^&*()_+[]{}|;:,.<>?" for char in password):
         score += 1
     else:
-        feedback.append("💪 Include at least one special character.🛡️")
+        feedback.append(" Include at least one special character.🛡️")
     return score, feedback
 def get_strength_label(score):
     if score == 0:
@@ -37,7 +37,7 @@ def get_strength_label(score):
     elif score == 4:
         return 'Very Strong 🔵', 'blue'
     elif score == 5:
-        return 'Very Strong 🔥💪', 'blue'
+        return 'Very Strong 🔥', 'blue'
 def generate_password(length, include_uppercase, include_special, include_numbers):
     characters = string.ascii_lowercase  
     if include_uppercase:
